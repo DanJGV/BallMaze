@@ -4,6 +4,7 @@
 #include "PickupItem.h"
 #include "Ball.h"
 #include "Kismet/GameplayStatics.h"
+int score;
 // Sets default values
 APickupItem::APickupItem()
 {
@@ -24,7 +25,7 @@ APickupItem::APickupItem()
 void APickupItem::BeginPlay()
 {
 	Super::BeginPlay();
-	
+	score = 0;
 }
 
 // Called every frame
@@ -37,7 +38,7 @@ void APickupItem::Tick(float DeltaTime)
 
 
 }
-int score = 0;
+
 void APickupItem::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* OtherActor, UPrimitiveComponent* OtherComp, int32 OtherBodyIndex, bool bfromSweep, const FHitResult& SweepResult)
 {
 	

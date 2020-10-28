@@ -4,6 +4,7 @@
 #include "KillZone.h"
 #include "Ball.h"
 #include "Kismet/GameplayStatics.h"
+#include "PickupItem.h"
 
 // Sets default values
 AKillZone::AKillZone()
@@ -37,6 +38,9 @@ void AKillZone::OnOverlapBegin(UPrimitiveComponent* OverlappedComp, AActor* Othe
 	if (Cast<ABall>(OtherActor) != nullptr)
 	{
 		UGameplayStatics::OpenLevel(this, FName(*GetWorld()->GetName()), false);
+		
+
+		
 
 	}
 }
